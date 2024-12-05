@@ -49,7 +49,7 @@
                     <article
                         class="group bg-white overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 reveal">
                         <div class="relative overflow-hidden">
-                            <img src="{{ $post->image ? asset('storage/' . $post->image) : 'https://picsum.photos/800/600?education=' . $loop->iteration }}"
+                            <img src="{{ $post->image ? asset('' . $post->image) : 'https://picsum.photos/800/600?education=' . $loop->iteration }}"
                                 alt="{{ $post->title }}"
                                 class="w-full h-56 object-cover transform group-hover:scale-110 transition-transform duration-500">
                             <div
@@ -110,19 +110,21 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <!-- Section Header -->
         <div class="text-center mb-16">
-            <h2 class="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600 mb-4 reveal">
+            <h2
+                class="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600 mb-4 reveal">
                 Explore Categories</h2>
             <div class="w-24 h-1 bg-blue-600 mx-auto rounded-full"></div>
         </div>
 
         <div class="flex flex-col lg:flex-row justify-center items-center gap-12 mb-8">
             <!-- Categories Navigation -->
-            <div class="sticky top-24">
-                <nav class="flex flex-wrap justify-center items-center space-x-3" aria-label="Categories">
+            <div class="sticky top-24 lg:top-0 w-full lg:w-auto">
+                <nav class="flex flex-col lg:flex-row justify-center items-center space-y-4 lg:space-x-3 lg:space-y-0"
+                    aria-label="Categories">
                     @foreach($categories as $index => $category)
                         @if($category->posts->isNotEmpty()) <!-- Check if the category has posts -->
                             <button onclick="showCategory({{ $index }})"
-                                class="category-tab px-6 py-4 rounded-lg transition-all duration-500 ease-in-out bg-gray-100 text-gray-700 hover:bg-blue-600 hover:text-white flex items-center justify-between group {{ $index === 0 ? 'active-tab' : '' }}"
+                                class="category-tab w-full lg:w-auto px-6 py-4 rounded-lg transition-all duration-500 ease-in-out bg-gray-100 text-gray-700 hover:bg-blue-600 hover:text-white flex items-center justify-between group {{ $index === 0 ? 'active-tab' : '' }}"
                                 data-index="{{ $index }}">
                                 <span
                                     class="font-semibold group-hover:tracking-wider transition-transform duration-500 ease-in-out">
@@ -135,19 +137,20 @@
             </div>
         </div>
 
+
         <div class="flex flex-col lg:flex-row gap-12">
             <!-- Posts Grid -->
-            <div class="lg:w-3/4">
+            <div class="w-full">
                 @foreach($categories as $index => $category)
                     <div class="category-content" id="category-{{ $index }}"
                         style="{{ $index === 0 ? '' : 'display: none;' }}">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                             @foreach($category->posts->take(4) as $post)
                                 <article
                                     class="group bg-white overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-1">
                                     <!-- Image Container -->
                                     <div class="relative h-64 overflow-hidden">
-                                        <img src="{{ $post->image ? asset('storage/' . $post->image) : 'https://picsum.photos/800/600?education=' . $loop->parent->iteration . $loop->iteration }}"
+                                        <img src="{{ $post->image ? asset('' . $post->image) : 'https://picsum.photos/800/600?education=' . $loop->parent->iteration . $loop->iteration }}"
                                             alt="{{ $post->title }}"
                                             class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
                                         <div

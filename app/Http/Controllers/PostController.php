@@ -6,7 +6,7 @@ use App\Models\Category;
 use App\Models\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
-
+use Str;
 class PostController extends Controller
 {
     public function index(Request $request)
@@ -46,7 +46,7 @@ class PostController extends Controller
         $data = $request->all();
     
         if ($request->hasFile('image')) {
-            $data['image'] = $request->file('image')->store('posts', 'public');
+            $data['image'] = $this->fileUpload($request, 'image', 'image');
         }
     
         $data['user_id'] = auth()->id(); // Assign the authenticated user's ID
@@ -81,10 +81,8 @@ class PostController extends Controller
         $data = $request->all();
 
         if ($request->hasFile('image')) {
-            if ($post->image) {
-                Storage::disk('public')->delete($post->image);
-            }
-            $data['image'] = $request->file('image')->store('posts', 'public');
+            
+            $data['image'] = $this->fileUpload($request, 'image', 'image');
         }
 
         $post->update($data);
@@ -102,5 +100,24 @@ class PostController extends Controller
 
         return redirect()->route('posts.index')
                          ->with('success', 'Post deleted successfully.');
+    }
+    protected function fileUpload($request, $fileName, $destination)
+    {
+        if ($request->hasFile($fileName)) {
+            $file = $request->file($fileName);
+            $fileName = $fileName.'-'.Str::random(6).time().'.'.$file->getClientOriginalExtension();
+            $destinationPath = 'uploads/'.trim($destination, '/');
+
+            // Ensure the destination directory exists
+            if (! is_dir($destinationPath)) {
+                mkdir($destinationPath, 0755, true);
+            }
+
+            $file->move($destinationPath, $fileName);
+
+            return $destinationPath.'/'.$fileName;
+        }
+
+        return null;
     }
 }

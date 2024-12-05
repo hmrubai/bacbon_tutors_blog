@@ -40,7 +40,7 @@
                             <div class="flex items-center justify-between">
                                 <div class="flex items-center space-x-4">
                                     <div class="flex-shrink-0">
-                                        <img src="{{ $post->image ? asset('storage/' . $post->image) : 'https://picsum.photos/50/50' }}"
+                                        <img src="{{ $post->image ? asset('' . $post->image) : 'https://picsum.photos/50/50' }}"
                                             alt="Post Image" class="w-12 h-12 rounded-lg">
                                     </div>
                                     <div>

@@ -16,7 +16,7 @@
                     <!-- Image Container -->
                     <div class="relative h-64 overflow-hidden">
                         <img 
-                            src="{{ $post->image ? asset('storage/' . $post->image) : 'https://picsum.photos/800/600?education=' . $loop->iteration }}"
+                            src="{{ $post->image ? asset('' . $post->image) : 'https://picsum.photos/800/600?education=' . $loop->iteration }}"
                             alt="{{ $post->title }}"
                             class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
                         >

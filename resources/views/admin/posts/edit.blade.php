@@ -52,7 +52,7 @@
                             class="block w-full text-gray-700 dark:text-gray-300 rounded-md border border-gray-300 dark:border-gray-700 dark:bg-gray-800 shadow-sm px-4 py-2">
                         @if ($post->image)
                             <p class="mt-2 text-sm text-gray-700 dark:text-gray-300">Current Image:</p>
-                            <img src="{{ asset('storage/' . $post->image) }}" alt="Post Image"
+                            <img src="{{ asset('' . $post->image) }}" alt="Post Image"
                                 class="mt-2 w-32 h-32 rounded-lg object-cover shadow">
                         @endif
                     </div>
