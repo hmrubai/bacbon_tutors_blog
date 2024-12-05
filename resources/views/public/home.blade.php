@@ -10,9 +10,7 @@
     </div>
     <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 text-center text-white">
         <h1 class="text-5xl md:text-7xl font-extrabold mb-6 animate-fade-in-up">
-            Welcome to <span
-                class="text-transparent bg-clip-text bg-gradient-to-r from-green-300 via-blue-500 to-purple-600">BACBON
-                Tutors Blog</span>
+            Welcome to BacBon Tutors Blog
         </h1>
         <p class="text-xl md:text-2xl mb-8 animate-fade-in-up delay-200">
             Discover educational insights, student success stories, and expert teaching resources.
@@ -42,7 +40,7 @@
     <section id="featured" class="pt-24 pb-16 bg-gradient-to-b from-white to-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-900 mb-4 reveal">Featured Articles</h2>
+                <h2 class="text-4xl font-bold text-gray-900 mb-4 reveal">Most Populer</h2>
                 <div class="w-24 h-1 bg-blue-600 mx-auto rounded-full"></div>
             </div>
 
@@ -112,33 +110,32 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <!-- Section Header -->
         <div class="text-center mb-16">
-            <h2
-                class="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600 mb-4 reveal">
+            <h2 class="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600 mb-4 reveal">
                 Explore Categories</h2>
             <div class="w-24 h-1 bg-blue-600 mx-auto rounded-full"></div>
         </div>
 
-        <div class="flex flex-col lg:flex-row gap-12">
+        <div class="flex flex-col lg:flex-row justify-center items-center gap-12 mb-8">
             <!-- Categories Navigation -->
-            <div class="lg:w-1/4">
-                <div class="sticky top-24">
-                    <nav class="space-y-3" aria-label="Categories">
-                        @foreach($categories as $index => $category)
-                            @if($category->posts->isNotEmpty()) <!-- Check if the category has posts -->
-                                <button onclick="showCategory({{ $index }})"
-                                    class="category-tab w-full text-left px-6 py-4 rounded-lg transition-all duration-500 ease-in-out bg-gray-100 text-gray-700 hover:bg-blue-600 hover:text-white flex items-center justify-between group {{ $index === 0 ? 'active-tab' : '' }}"
-                                    data-index="{{ $index }}">
-                                    <span
-                                        class="font-semibold group-hover:tracking-wider transition-transform duration-500 ease-in-out">
-                                        {{ $category->name }}
-                                    </span>
-                                </button>
-                            @endif
-                        @endforeach
-                    </nav>
-                </div>
+            <div class="sticky top-24">
+                <nav class="flex flex-wrap justify-center items-center space-x-3" aria-label="Categories">
+                    @foreach($categories as $index => $category)
+                        @if($category->posts->isNotEmpty()) <!-- Check if the category has posts -->
+                            <button onclick="showCategory({{ $index }})"
+                                class="category-tab px-6 py-4 rounded-lg transition-all duration-500 ease-in-out bg-gray-100 text-gray-700 hover:bg-blue-600 hover:text-white flex items-center justify-between group {{ $index === 0 ? 'active-tab' : '' }}"
+                                data-index="{{ $index }}">
+                                <span
+                                    class="font-semibold group-hover:tracking-wider transition-transform duration-500 ease-in-out">
+                                    {{ $category->name }}
+                                </span>
+                            </button>
+                        @endif
+                    @endforeach
+                </nav>
             </div>
+        </div>
 
+        <div class="flex flex-col lg:flex-row gap-12">
             <!-- Posts Grid -->
             <div class="lg:w-3/4">
                 @foreach($categories as $index => $category)
@@ -227,7 +224,7 @@
 <section class="py-16 bg-gradient-to-r from-blue-500 to-indigo-600 text-white">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 class="text-4xl font-extrabold mb-4">
-            Stay Updated with <span class="text-yellow-300">BACBON Tutors</span>
+            Stay Updated with <span class="text-yellow-300">BacBon Tutors</span>
         </h2>
         <p class="text-blue-100 mb-8">Get the latest educational insights and updates delivered to your inbox.</p>
         <form class="flex flex-col sm:flex-row gap-4 justify-center">

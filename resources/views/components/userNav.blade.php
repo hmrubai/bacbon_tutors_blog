@@ -5,7 +5,7 @@
             <div class="flex items-center">
                 <a href="/" class="flex items-center space-x-2">
                     <!-- Add image logo -->
-                    <img src="{{ asset('assets/images/BT_01.png') }}" alt="BACBON Tutors Logo"
+                    <img src="{{ asset('assets/images/BT_01.png') }}" alt="BacBon Tutors Logo"
                         class="h-36 w-36 object-contain">
 
                     <!-- Fallback text for accessibility -->
@@ -29,9 +29,8 @@
                 <!-- Hotline Number Display -->
                 <div class="flex items-center space-x-2 bg-blue-100 rounded-full px-4 py-2">
                     <i class="fas fa-phone-alt text-blue-600"></i>
-                    <span class="text-lg font-semibold text-blue-700">Hotline:</span>
-                    <a href="tel:+1234567890" class="text-blue-600 font-bold hover:text-blue-800 transition">+1 234 567
-                        890</a>
+                    {{-- <span class="text-lg font-semibold text-blue-700">Hotline:</span> --}}
+                    <a href="tel:+8809611900205" class="text-blue-600 font-bold hover:text-blue-800 transition">+88 09611 900 205</a>
                 </div>
             </div>
 
@@ -61,9 +60,8 @@
                 <!-- Mobile Hotline Display -->
                 <div class="flex items-center space-x-2 px-4 bg-blue-50 rounded-full py-2">
                     <i class="fas fa-phone-alt text-blue-600"></i>
-                    <span class="text-lg font-semibold text-blue-700">Hotline:</span>
-                    <a href="tel:+1234567890" class="text-blue-600 font-bold hover:text-blue-800 transition">+1 234 567
-                        890</a>
+                    {{-- <span class="text-lg font-semibold text-blue-700">Hotline:</span> --}}
+                    <a href="tel:+8809611900205" class="text-blue-600 font-bold hover:text-blue-800 transition">+88 09611 900 205</a>
                 </div>
             </div>
         </div>

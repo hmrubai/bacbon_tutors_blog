@@ -5,8 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <!-- <title>{{ config('app.name', 'BACBON Tutors') }}</title> -->
-    <title>BACBON Tutors - Educational Blog</title>
+        <!-- <title>{{ config('app.name', 'BacBon Tutors') }}</title> -->
+    <title>BacBon Tutors - Educational Blog</title>
     <link rel="icon" href="assets/images/logo2.png" type="image/x-icon" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>

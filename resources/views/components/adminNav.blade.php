@@ -6,7 +6,7 @@
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
                     <a href="{{ route('dashboard') }}">
-                    <img src="{{ asset('assets/images/BT_01.png') }}" alt="BACBON Tutors Logo"
+                    <img src="{{ asset('assets/images/BT_01.png') }}" alt="BacBon Tutors Logo"
                     class="h-36 w-36 object-contain">
                     </a>
                 </div>

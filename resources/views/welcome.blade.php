@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>BACBON Tutors - Blog</title>
+    <title>BacBon Tutors - Blog</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
    
@@ -41,7 +41,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">
                 <div class="flex items-center">
-                    <a href="/" class="text-2xl font-bold text-blue-600">BACBON School</a>
+                    <a href="/" class="text-2xl font-bold text-blue-600">BacBon School</a>
                 </div>
                 
                 <div class="hidden md:flex items-center space-x-8">
@@ -96,7 +96,7 @@
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
             <div class="text-center space-y-8">
                 <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 opacity-0 animate-[fade-in-up_1s_ease-out_0.2s_forwards]">
-                    Welcome to BACBON Tutors Blog
+                    Welcome to BacBon Tutors Blog
                 </h1>
                 <p class="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto mb-8 opacity-0 animate-[fade-in-up_1s_ease-out_0.4s_forwards]">
                     Discover educational insights, student success stories, and expert teaching resources.
@@ -176,7 +176,7 @@
     <!-- Newsletter -->
     <section class="py-16 bg-blue-600 reveal">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl font-bold text-white mb-4">Stay Updated with BACBON School</h2>
+            <h2 class="text-3xl font-bold text-white mb-4">Stay Updated with BacBon School</h2>
             <p class="text-blue-100 mb-8">Get the latest educational insights and updates delivered to your inbox.</p>
             <form class="flex flex-col sm:flex-row gap-4 justify-center">
                 <input type="email" 
@@ -196,7 +196,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
                 <div>
-                    <h3 class="text-xl font-bold mb-4">About BACBON School</h3>
+                    <h3 class="text-xl font-bold mb-4">About BacBon School</h3>
                     <p class="text-gray-400">Empowering students with knowledge and skills for a brighter future through quality education and innovative learning approaches.</p>
                 </div>
                 <div>
@@ -230,7 +230,7 @@
                 </div>
             </div>
             <div class="mt-12 pt-8 border-t border-gray-800 text-center text-gray-400">
-                <p>&copy; 2024 BACBON School. All rights reserved.</p>
+                <p>&copy; 2024 BacBon School. All rights reserved.</p>
             </div>
         </div>
     </footer>

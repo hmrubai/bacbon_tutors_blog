@@ -83,7 +83,7 @@
                                             Your Message
                                         </h1>
                                         <p class="text-white font-normal text-sm md:text-[17px]">
-                                            Bacbon@mail.com
+                                            BacBon@mail.com
                                         </p>
                                     </div>
                                 </div>
