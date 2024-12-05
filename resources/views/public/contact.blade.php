@@ -30,10 +30,10 @@
                 <!-- <div class="border-l-4 border-blue-500 mr-4 h-full"></div> -->
                 <div class="pl-2">
                     <h2 class="text-xl font-bold text-gray-800">Head Office</h2>
-                    <p class="text-gray-800 mt-2">+880 1759 747387</p>
-                    <p class="text-gray-800 font-semibold mt-1">Contact@BacBonltd.com.bd</p>
+                    <p class="text-gray-800 mt-2">+88 09611 900 205</p>
+                    <p class="text-gray-800 font-semibold mt-1">info@bacbonltd.com</p>
                     <p class="text-gray-600 mt-2">
-                        Floor-05, Brac Bank Tower, Main Road, Block C, Banasree, Dhaka-1219
+                        House#13, Block-C, Main Road, Banasree, Rampura, Dhaka-1219
                     </p>
                 </div>
             </div>
@@ -72,7 +72,7 @@
                                             Call This Now
                                         </h1>
                                         <p class="text-white font-normal text-sm md:text-[17px]">
-                                            +025461556695
+                                            +88 09611 900 205
                                         </p>
                                     </div>
                                 </div>
@@ -83,7 +83,7 @@
                                             Your Message
                                         </h1>
                                         <p class="text-white font-normal text-sm md:text-[17px]">
-                                            BacBon@mail.com
+                                            info@bacbonltd.com
                                         </p>
                                     </div>
                                 </div>
@@ -94,7 +94,7 @@
                                             Your location
                                         </h1>
                                         <p class="text-white font-normal text-sm md:text-[17px]">
-                                            Banasree, Dhaka
+                                            House#13, Block-C, Main Road, Banasree, Rampura, Dhaka-1219
                                         </p>
                                     </div>
                                 </div>
@@ -106,10 +106,9 @@
                                     Follow Social:
                                 </p>
                                 <div class="flex space-x-2">
-                                    <img src="assets/images/fb.png" alt="" />
-                                    <img src="assets/images/yt.png" alt="" />
-                                    <img src="assets/images/in.png" alt="" />
-                                    <img src="assets/images/insta.png" alt="" />
+                                    <a target="_blank" href="https://www.facebook.com/BacBonTutors"><img src="assets/images/fb.png" alt="" /></a>
+                                    <a target="_blank" href="https://www.youtube.com/@BacBonSchool"><img src="assets/images/yt.png" alt="" /></a>
+                                    <a target="_blank" href="https://www.linkedin.com/company/bacbonltd/mycompany/"><img src="assets/images/in.png" alt="" /></a>
                                 </div>
                             </div>
                             <div>
