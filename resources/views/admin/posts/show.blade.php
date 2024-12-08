@@ -10,7 +10,7 @@
     <section class="relative min-h-[60vh]">
         <div class="absolute inset-0 ">
             @if($post->image)
-                <img src="{{ asset('storage/' . $post->image) }}" alt="{{ $post->title }}"
+                <img src="{{ asset('' . $post->image) }}" alt="{{ $post->title }}"
                     class="w-full h-full object-cover">
             @else
                 <div class="w-full h-full bg-gradient-to-br from-blue-600 to-indigo-900"></div>

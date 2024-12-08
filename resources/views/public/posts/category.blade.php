@@ -9,7 +9,7 @@
                 <article
                     class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 reveal">
                     <div class="relative overflow-hidden">
-                        <img src="{{ $post->image ? asset('storage/' . $post->image) : 'https://picsum.photos/800/600?education=' . $loop->iteration }}"
+                        <img src="{{ $post->image ? asset('' . $post->image) : 'https://picsum.photos/800/600?education=' . $loop->iteration }}"
                             alt="{{ $post->title }}"
                             class="w-full h-56 object-cover transform group-hover:scale-110 transition-transform duration-500">
                         <div
