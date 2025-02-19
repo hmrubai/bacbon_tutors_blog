@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <title>@yield('title', 'BacBon Tutors - Educational Blog')</title>
+    <meta name="description" content="@yield('meta_description', 'Discover educational insights, student success stories, and expert teaching resources.')">
+    <meta name="keywords" content="@yield('meta_keywords', 'BacBon Tutors, Tutors, Blog, BB Tutors, BacBon')">
+    <meta name="author" content="BacBon Tutors - Educational Blog">
 
-        <!-- <title>{{ config('app.name', 'BacBon Tutors') }}</title> -->
-    <title>BacBon Tutors - Educational Blog</title>
+    <!-- <title>{{ config('app.name', 'BacBon Tutors') }}</title> -->
     <link rel="icon" href="assets/images/logo2.png" type="image/x-icon" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>

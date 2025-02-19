@@ -3,7 +3,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>BacBon Tutors - Educational Blog</title>
+    {{-- <title>BacBon Tutors - Educational Blog</title> --}}
+    <title>@yield('title', 'BacBon Tutors - Educational Blog')</title>
+    <meta name="description" content="@yield('meta_description', 'Discover educational insights, student success stories, and expert teaching resources.')">
+    <meta name="keywords" content="@yield('meta_keywords', 'BacBon Tutors, Tutors, Blog, BB Tutors, BacBon')">
+    <meta name="author" content="BacBon Tutors - Educational Blog">
     <link rel="icon" href="{{ asset('assets/images/logo2.png') }}" type="image/x-icon" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -11,6 +15,19 @@
       src="https://kit.fontawesome.com/c7acf970ff.js"
       crossorigin="anonymous"
     ></script>
+
+    <title>{{ $post->title ?? null }} | BacBon Tutors - Educational Blog</title>
+    <meta name="description" content="{{ Str::limit(strip_tags($post->description ?? null), 160) }}">
+    {{-- <meta name="keywords" content="{{ implode(',', $post->tags) }}"> --}}
+    <meta name="author" content="{{ $post->user->name ?? null }}">
+    <meta property="og:title" content="{{ $post->title ?? null  }}">
+    <meta property="og:description" content="{{ Str::limit(strip_tags($post->description ?? null ), 160) }}">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="{{ url()->current() }}">
+
+    {!! SEOMeta::generate() !!}
+    {!! OpenGraph::generate() !!}
+    {{-- {!! TwitterCard::generate() !!} --}}
     <style>
         .reveal {
             opacity: 0;
@@ -45,6 +62,9 @@
      <!-- Main Content -->
      <main>
         @yield('content')
+        @section('title', 'Educational Blog')
+        @section('meta_description', 'Discover educational insights, student success stories, and expert teaching resources.')
+        @section('meta_keywords', 'BacBon Tutors, Tutors, Blog, BB Tutors, BacBon')
     </main>
 
     <!-- Footer -->

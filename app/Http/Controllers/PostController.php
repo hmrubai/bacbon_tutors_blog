@@ -7,6 +7,10 @@ use App\Models\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Str;
+use Artesaos\SEOTools\Facades\SEOMeta;
+use Artesaos\SEOTools\Facades\OpenGraph;
+use Artesaos\SEOTools\Facades\TwitterCard;
+
 class PostController extends Controller
 {
     public function index(Request $request)
@@ -59,6 +63,11 @@ class PostController extends Controller
     
     public function show(Post $post)
     {
+        SEOMeta::setTitle($post->title);
+        SEOMeta::setDescription(substr(strip_tags($post->description), 0, 160));
+        SEOMeta::addMeta('article:published_time', $post->created_at->toW3CString(), 'property');
+        SEOMeta::addKeyword([$post->title]);
+
         return view('admin.posts.show', compact('post'));
     }
 

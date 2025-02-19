@@ -57,12 +57,6 @@
                     {!! $post->description !!}
                 </p>
 
-
-                <!-- Content -->
-                <div class="mt-8">
-                    {!! $post->content !!}
-                </div>
-
                 <!-- Tags Section -->
                 @if(isset($post->tags) && count($post->tags) > 0)
                     <div class="border-t dark:border-gray-700 mt-12 pt-8">
